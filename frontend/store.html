@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Project</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./index.js" async></script>
+</head>
+
+<body>
+    <div id="EcommerceContainer">
+        <header>
+            <ul class='header'>
+                <li><a href="./index.html">HOME</a></li>
+                <li><a href="#">STORE</a></li>
+                <li><a href="./about.html">ABOUT</a></li>
+                <li><a href="./orders.html">ORDERS</a></li>
+                <a href="#cart" class="cart-holder">CART<span class="cart-number">0</span></a>
+
+            </ul>
+            <h1>THE EMINEM SHOW</h1>
+        </header>
+        <section id="products" class="container">
+            <h2>PRODUCTS</h2>
+            <!-- this DIV is for add shop items from backend to display on frontend! -->
+            <div id="shop-items">
+
+            </div>
+            <div id="pagination" class="pagination">
+    
+              </div>
+        </section>
+        
+        <section id="cart" class="container content-section">
+            <h2 class="section-header">CART</h2>
+            <button class="cancel">X</button>
+            <div class="cart-row">
+                <span class="cart-item cart-header cart-column">ITEM</span>
+                <span class="cart-price cart-header cart-column">PRICE</span>
+                <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+            </div>
+            <div class="cart-items">
+                
+            </div>
+            <div class="cart-total">
+                <strong class="total-value">Total</strong>
+                <span id="total-value" class="cart-total-price">$0</span>
+            </div>
+            <button class="purchase-btn" type="button">PURCHASE</button>
+        </section>
+        <button class="cart-btn-bottom"><a href="#cart" class="cart-bottom">See the Cart</a></button>
+    </div>
+    <div id="container"></div>
+    
+    <footer>
+        <div class="footer-title">
+            THE EMINEM SHOW
+        </div>
+        <div class="footer-icons">
+            <ul>
+                <li><a href="https://www.youtube.com">
+                        <img src="./img/6260efc8fc9a9002669d2f4ad9956cc0.jpg" alt="">
+                    </a></li>
+                <li><a href="https://spotify.com">
+                        <img src="./img/Spotify Logo.png" alt="">
+                    </a></li>
+                <li><a href="https://facebook.com">
+                        <img src="./img/Facebook Logo.png" alt="">
+                    </a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"
+        integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+
+</html>
