@@ -4,6 +4,7 @@ if (document.readyState == "loading") {
     ready();
 }
 
+
 function ready() {
     const removeCartItemButtons = document.getElementsByClassName("btn-danger");
 
@@ -68,7 +69,6 @@ function showPagination({ currentPage, hasNextPage, hasPreviousPage, nextPage, p
 function showProductsOnScreen(products) {
 
     parentSection.innerHTML = ''
-
     products.data.products.forEach(product => {
 
         const productHtml = `
@@ -139,11 +139,11 @@ function getCartItems() {
 function showProductsInCart(listofproducts) {
     cartItems.innerHTML = "";
     listofproducts.forEach(product => {
+        console.log(product.id)
         const id = `album-${product.id}`;
         const name = product.title;
         const img_src = product.imageUrl;
         const price = product.price;
-        // let cartValue = document.querySelector('.cart-number').innerText
         document.querySelector('.cart-number').innerText = parseInt(document.querySelector('.cart-number').innerText) + 1
         const cart_item = document.createElement('div');
         cart_item.classList.add('cart-row');

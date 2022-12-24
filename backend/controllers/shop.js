@@ -183,16 +183,27 @@ exports.postCartDeleteProduct = (req, res, next) => {
 
 };
 
+//what it does is sequelize's magically created fxn getOrders is called 
+// with req.user to get orders that response includes a [product array]
+// then the orders array is shown in json format with a status of 200 
+//  else the catch block runs.
+
+
+
 exports.getOrders = (req, res, next) => {
   req.user.getOrders({ include: ['products'] })
     .then(orders => {
       res.status(200).json(orders)
+     
     })
     .catch(err => {
       res.status(400).json('Unable to fetch products!');
     });
 };
 
+/* 
+
+*/
 exports.postOrder = (req, res, next) => {
   let fetchedCart;
   req.user.getCart()
